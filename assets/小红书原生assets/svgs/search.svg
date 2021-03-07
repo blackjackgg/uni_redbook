@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="他人页笔记列表" transform="translate(-345.000000, -78.000000)" stroke="#999999">
+            <g id="nav-default" transform="translate(0.000000, 64.000000)">
+                <g id="nav">
+                    <g id="Group" transform="translate(331.000000, 0.000000)">
+                        <g id="search" transform="translate(15.000000, 15.000000)">
+                            <g id="Group-86">
+                                <path d="M13.2017,6.6009 C13.2017,10.2464 10.2462,13.2014 6.6007,13.2014 C2.9552,13.2014 0.0002,10.2464 0.0002,6.6009 C0.0002,2.9554 2.9552,-9.99999997e-05 6.6007,-9.99999997e-05 C10.2462,-9.99999997e-05 13.2017,2.9554 13.2017,6.6009 Z" id="Stroke-1" stroke-width="1.5"></path>
+                                <path d="M14.7427,14.81675 L11.3387,11.38625" id="Stroke-3" stroke-width="1.5" opacity="0.98999995" stroke-linecap="round"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

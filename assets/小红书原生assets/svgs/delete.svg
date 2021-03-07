@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_delete_grey_15</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_delete_grey_15" transform="translate(-1.000000, -1.000000)">
+            <g>
+                <rect id="Rectangle-2" x="0" y="0" width="15" height="15"></rect>
+                <g id="Page-1" transform="translate(1.500000, 1.500000)" stroke="#CCCCCC" stroke-linecap="round">
+                    <path d="M9.723,4.1253 L9.723,10.0803 C9.723,10.9873 8.989,11.7223 8.081,11.7223 L3.893,11.7223 C2.987,11.7223 2.251,10.9873 2.251,10.0803 L2.251,4.1253" id="Stroke-1"></path>
+                    <path d="M0.5003,2.5306 L11.4753,2.5306" id="Stroke-3"></path>
+                    <path d="M4.6712,0.5003 L7.3042,0.5003" id="Stroke-5"></path>
+                    <path d="M7.304,4.1253 L7.304,9.6833" id="Stroke-7"></path>
+                    <path d="M4.6712,4.1253 L4.6712,9.6833" id="Stroke-9"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
