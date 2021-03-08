@@ -8,6 +8,10 @@ import App from './App'
 // import 'mint-ui/lib/style.css'
 // Vue.use(MintUI)
 
+// 导入ui 必备文件
+import uView from 'ui/uview-ui';
+Vue.use(uView);
+
 import './assets/css/main.less';
 import Store from './store'
 import WXrequest from './utils/wx-request'

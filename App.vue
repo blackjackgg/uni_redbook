@@ -16,7 +16,10 @@
 	/*每个页面公共css */
 </style>
 
-
+<style lang="scss">
+@import "ui/uview-ui/index.scss";
+@import "app.scss"
+</style>
 
 <style>
 .container {
