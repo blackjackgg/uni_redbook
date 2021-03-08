@@ -173,7 +173,7 @@ export default {
       }
     },
     goDetail(item) {
-      wx.navigateTo({ url: `../detail/main?id=${item.id}` });
+      uni.navigateTo({ url: `../detail/index?id=${item.id}` });
     },
     changeNav(index) {
       if (this.navIndex == index) {
@@ -222,10 +222,11 @@ export default {
       this.loading = false;
     },
     changeFocus(index) {
-      if (!this.userInfo) {
-        wx.navigateTo({ url: "../grant/main" });
-        return false;
-      }
+		console.log("welcome")
+      // if (!this.userInfo) {
+      //   uni.navigateTo({ url: "../grant/index" });
+      //   return false;
+      // }
       switch (index) {
         case 1:
           this.$store.dispatch("changeUserFollow", this.dataObj);
@@ -239,7 +240,7 @@ export default {
       let res = await this.$request.get("/api/users", { id });
       if (!res.errno) {
         this.dataObj = res.data;
-        wx.setNavigationBarTitle({
+        uni.setNavigationBarTitle({
           title: this.dataObj.nickName
         });
       }

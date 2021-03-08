@@ -2,7 +2,7 @@
 	 <view>
 		<j-tab-swiper-ad :list="tablist" v-slot:anyview="{tabitem}">
 	<!-- 这个组件传入一个tab列表 用name来命名 输出一个tab的item 可以根据item来生成不同的页面 -->
-		<j-gallery-storm></j-gallery-storm>
+		<j-text :data="tabitem"></j-text>
 		</j-tab-swiper-ad>
 	 </view>
 		

@@ -1,8 +1,8 @@
 <template>	
 	 <view>
-		<j-tab-swiper-ad :list="tablist" v-slot:anyview="{tabitem}">
+		<j-tab-swiper-ad :list="tablist" v-slot:anyview="{tabitem,tabindex}">
 	<!-- 这个组件传入一个tab列表 用name来命名 输出一个tab的item 可以根据item来生成不同的页面 -->
-		<j-gallery-storm  @scroll_down="scroll_down"  :gallery_list="gallery_list"></j-gallery-storm>
+		<j-gallery-storm :tabitem="tabitem" :tabindex="tabindex"></j-gallery-storm>
 		</j-tab-swiper-ad>
 	 </view>
 		
@@ -15,11 +15,6 @@
 	export default {
 		data() {
 			return {
-				pagers: {
-					page: 1,
-					rows: 10,
-					totalPages: 0
-				},
 				tablist: [{
 					name: "关注",
 					url: "https://baidu.com"
@@ -31,38 +26,20 @@
 					name: "本地",
 					url: "https://77.com"
 				}, 
-				
 				]
 			}
 		},
+		// onPullDownRefresh() {
+		//         console.log('refresh');
+		//         setTimeout(function () {
+		//             uni.stopPullDownRefresh();
+		//         }, 1000);
+		//     },
 		methods: {
-		scroll_down() {
-			console.log("hzzzheliiii")
-			this.getList()
-		},
-		async getList() {
-				this.loading = false;
-				let res = await this.$request.get("/api/works/hot", {
-					...this.pagers,
-					type: 1
-				});
-				console.log(res)
-				if (!res.errno) {
-					if (this.pagers.page == 1) {
-						this.gallery_list = [];
-					}
-		
-					if (res.data.currentPage >= res.data.totalPages) {
-						this.listsClose = true;
-					}
-					this.gallery_list = this.gallery_list.concat(res.data.data);
-					this.pagers.page = res.data.currentPage;
-					this.pagers.totalPages = res.data.totalPages;
-				}
-			}
-		},
+			},
+
 		onLoad() {
-		}
+		},
 	}
 </script>
 

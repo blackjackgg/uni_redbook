@@ -143,13 +143,13 @@ export default {
       this.getList();
     },
     async sendComment() {
-      if (!this.userInfo) {
-        wx.navigateTo({ url: "../grant/main" });
-        return false;
-      }
+      // if (!this.userInfo) {
+      //   uni.navigateTo({ url: "../grant/index" });
+      //   return false;
+      // }
 
       if (!this.postParams.key) {
-        wx.showToast({
+        uni.showToast({
           title: "请输入评论内容",
           icon: "none"
         });
@@ -164,7 +164,7 @@ export default {
         this.getList();
       }
 
-      wx.showToast({
+      uni.showToast({
         title: "评论成功",
         icon: "none"
       });
@@ -231,7 +231,7 @@ export default {
     this.postParams.id = e.id;
   },
   async onShow() {
-    wx.showShareMenu();
+    uni.showShareMenu();
     this.getData();
     this.getList();
   },

@@ -2,7 +2,7 @@
 	<view>
 		<j-tab-swiper :list="list" v-slot:chart="{index,data}">
 				<swiper-item :ref="'chart'+index" :chartData="data">
-				<slot name="anyview" :tabitem="data"></slot>
+				<slot name="anyview" :tabitem="data" :tabindex="index"></slot>
 			    </swiper-item>
 		</j-tab-swiper>
 	</view>

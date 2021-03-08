@@ -6,9 +6,9 @@
 import Store from '../store'
 
 function request(url, method, data, header = {}) {
-  wx.showLoading({
-    title: '加载中' // 数据请求前loading
-  })
+  // wx.showLoading({
+  //   title: '加载中' // 数据请求前loading
+  // })
   return new Promise((resolve, reject) => {
     wx.request({
       url: Store.state.httpUrl + url,
@@ -35,11 +35,11 @@ function request(url, method, data, header = {}) {
             }
           }
         }
-        wx.hideLoading()
+        // wx.hideLoading()
         resolve(res.data)
       },
       fail: function (res) {
-        wx.hideLoading()
+        // wx.hideLoading()
         // reject(false)
       },
       complete: function (res) {

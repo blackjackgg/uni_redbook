@@ -5,33 +5,35 @@
 			"style": {
 				"navigationBarTitleText": "uni-app",
 				"navigationStyle":"custom",
+				// "enablePullDownRefresh": true,
 				"app-plus":{
 					"titleView":false
+					// "pullToRefresh":{"offset":"30rpx",  "color": "#ff3333"}
 					}
 			}
 		},
 		{
 			"path": "pages/user/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "用户"
 			}
 		},
 		{
 			"path": "pages/grant/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "授权"
 			}
 		},
 		{
 			"path": "pages/search/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "搜索"
 			}
 		},
 		{
 			"path": "pages/personal/main",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "个人"
 			}
 		},
 		{
@@ -43,31 +45,31 @@
 		{
 			"path": "pages/follow/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "关注"
 			}
 		},
 		{
 			"path": "pages/fans/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "粉丝"
 			}
 		},
 		{
 			"path": "pages/detail/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "详情"
 			}
 		},
 		{
 			"path": "pages/release/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "发布"
 			}
 		},
 		{
 			"path": "pages/search/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "搜索"
 			}
 		}
         ,{

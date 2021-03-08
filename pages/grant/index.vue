@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     goBack() {
-      wx.navigateBack();
+      uni.navigateBack();
     },
     bindGetUserInfo(e) {
       this.$store.commit("SET_USERINFO", e.target.userInfo);
@@ -59,8 +59,8 @@ export default {
                   });
                   if (!checkRes.errno) {
                     await _this.$store.commit("SET_TOKEN", checkRes.data.token);
-                    wx.setStorageSync("token", checkRes.data.token);
-                    wx.setStorageSync("userInfo", resUser.userInfo);
+                    uni.setStorageSync("token", checkRes.data.token);
+                    uni.setStorageSync("userInfo", resUser.userInfo);
                     await _this.$store.commit("SET_USERINFO", resUser.userInfo);
                     wx.navigateBack();
                   }

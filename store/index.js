@@ -41,19 +41,19 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-    async changeUser({ commit }, params) {
+    async changeUser({ commit }, params) { // 跳转到用户详情页
       if (params.uid || params.id) { 
-        mpvue.navigateTo({ url: `../personal/main?id=${params.uid || params.id}` });
+        uni.navigateTo({ url: `../personal/main?id=${params.uid || params.id}` });
       }
     },
     async changeUserFollow({ commit }, params) {
-      mpvue.navigateTo({ url: `../follow/main?id=${params.uid || params.id || ''}` });
+      uni.navigateTo({ url: `../follow/index?id=${params.uid || params.id || ''}` });
     },
     async changeUserFans({ commit }, params) {
-      mpvue.navigateTo({ url: `../fans/main?id=${params.uid || params.id || ''}` });
+      uni.navigateTo({ url: `../fans/index?id=${params.uid || params.id || ''}` });
     },
     async changeWorks({ commit }, params) {
-      mpvue.navigateTo({ url: `../detail/main?id=${params.id}` });
+      uni.navigateTo({ url: `../detail/index?id=${params.id}` });
     }
   },
   getters: {

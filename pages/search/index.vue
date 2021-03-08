@@ -90,7 +90,7 @@ export default {
     // let app = getApp()
   },
   async onShow() {
-    wx.showShareMenu();
+    uni.showShareMenu();
     let _this = this;
     this.getData();
     this.getWxSetting();
