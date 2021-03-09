@@ -19,7 +19,7 @@
 					</div>
 				</div>
 				<div class="home-title" v-if="false">热门推荐</div> -->
-				<load-refresh ref="loadRefresh" :isRefresh="true" refreshType="hollowDots" color="#04C4C4" heightReduce="0" :fixedHeight="true"
+				<load-refresh ref="loadRefresh" :isRefresh="true" refreshType="swappingSquares" color="#ff0000" heightReduce="80" :fixedHeight="true"
 				 backgroundCover="#F3F5F5" :pageNo="pagers.page" :totalPageNo="pagers.totalPages" @loadMore="loadMore" @refresh="refresh">
 					<view slot="content-list">
 						<div class="public-list">

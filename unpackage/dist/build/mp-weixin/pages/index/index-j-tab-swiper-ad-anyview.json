@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "index-j-tab-swiper-ad-anyview": "/pages/index/index-j-tab-swiper-ad-anyview",
+    "j-tab-swiper-ad": "/components/j-tab-swiper-ad/j-tab-swiper-ad",
+    "j-gallery-storm": "/components/j-gallery-storm/j-gallery-storm"
+  }
+}

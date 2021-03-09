@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "j-tab-swiper-ad-j-tab-swiper-chart": "/components/j-tab-swiper-ad/j-tab-swiper-ad-j-tab-swiper-chart",
+    "j-tab-swiper": "/components/j-tab-swiper/j-tab-swiper"
+  }
+}

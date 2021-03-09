@@ -12,9 +12,11 @@
 	}
 </script>
 
-<style>
+<style lang="less">
 	/*每个页面公共css */
+	@import './assets/css/main.less';
 </style>
+
 
 <style lang="scss">
 @import "ui/uview-ui/index.scss";

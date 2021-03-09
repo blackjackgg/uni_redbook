@@ -1,32 +1,32 @@
 <!-- 滚动页面做成一个组件 里面放置一个插槽 -->
 <template>
 	<view>
-	<view class="f-center">
+	<view class="f-center" :style="{'margin-top':barHeight+'px'}">
        <u-tabs ref="tabs" :list="list" bar-height="6" bar-width="40" :active-color="color"
 	   @change="change"  :current="current"></u-tabs>
 	</view>
-	 <swiper class="swiper"  :current="swipe_current" @change="swipe_change">  
-	 
-	     <slot v-for="(item,index) in list" 
+	 <swiper :style="{'height':swiperhigh+'px'}"  :current="swipe_current" @change="swipe_change">  
+<!-- 	     <slot v-for="(item,index) in list" 
 	             name="chart"
 	             :data="item"
 	             :index="index">
-	     </slot>
+	     </slot> -->
 		   
-<!-- 			<swiper-item v-for="(item, index) in list">
-				<slot  name="chart" :url="index">{{item}}</slot>
-			 </swiper-item>   -->      
-		                     </swiper>
-							 
-							 
+			<swiper-item v-for="(item, index) in list">
+				<slot  name="chart" :tabitem="item" :tabindex="index"></slot>
+			 </swiper-item>        
+		 </swiper>				 
 							 </view>
 </template>
 
 <script>
+	var _self;
 	export default {
-		props: {list:{type: Array,default:[]}},
+		props: ['list'],
 		data() {
 			return {
+				swiperhigh:0,
+				barHeight:0,
 				txt0:"",
 				txt1:"",
 				txt2:"",
@@ -44,33 +44,51 @@
 			};
 		},
 		// 使用监听器对值的修改进行监听
+		created() {
+              this.getSystemStatusBarHeight();
+		},
 		methods: {
+			getSystemStatusBarHeight(){
+				// #ifdef MP
+				console.log("ggin222")
+				var height = 25
+				this.barHeight = height;
+				console.log("height"+height)
+				// #endif
+				
+			    // #ifdef APP-PLUS 
+				console.log("ggin")
+			    var height = plus.navigator.getStatusbarHeight();
+			    this.barHeight = height;
+				console.log("height"+height)
+			    // #endif
+			    // #ifdef H5
+				console.log("h5")
+			    this.barHeight = 0;
+			    // #endif
+				
+				let myself =this
+				// 获取屏幕高度设置swiper
+				uni.getSystemInfo({
+				    success: function (res) {
+				       myself.swiperhigh= res.windowHeight -myself.barHeight  -50;
+				    }
+				});
+			},
 			swipe_change(event){
 				this.current = event.detail.current
-				this.fresh_page()
 				
 			},
 			change(index) {
 							this.current = index;
 							this.swipe_current = index
-							this.fresh_page()
 						},
-			fresh_page(){
-				// 切换tab的时候刷新页面！
-				let pagemap = {0:"wtf",1:"ok,imfine",2:"fuck"}
-				let txt = pagemap[this.current]
-				this["txt"+this.current] = txt
-				
-			}
 		}
 	};
 </script>
 <style>
-	.swiper{
-		height: 100vh;
-	}
+
 	page{
 		max-height: 100vh;
-/* 		overflow: hidden; */
 	}
 </style>

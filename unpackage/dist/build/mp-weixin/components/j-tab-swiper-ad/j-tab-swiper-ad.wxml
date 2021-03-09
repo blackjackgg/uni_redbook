@@ -1,0 +1,1 @@
+<view><j-tab-swiper generic:scoped-slots-chart="j-tab-swiper-ad-j-tab-swiper-chart" data-vue-generic="scoped" vue-id="78862ef4-1" list="{{list}}" bind:__l="__l" vue-slots="{{['chart']}}"></j-tab-swiper></view>

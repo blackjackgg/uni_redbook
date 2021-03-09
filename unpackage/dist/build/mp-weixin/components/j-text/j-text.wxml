@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['click',['$event']]]]]}}" class="swiper-item uni-bg-red" bindtap="__e">{{data.url}}</view>

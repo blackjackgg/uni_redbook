@@ -1,0 +1,1 @@
+<swiper-item class="vue-ref" chartData="{{data}}" data-ref="{{'chart'+index}}"><slot name="anyview"></slot><scoped-slots-anyview tabitem="{{data}}" tabindex="{{index}}" class="scoped-ref" bind:__l="__l"></scoped-slots-anyview></swiper-item>

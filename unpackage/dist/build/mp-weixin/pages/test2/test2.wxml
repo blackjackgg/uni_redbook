@@ -1,0 +1,1 @@
+<view><j-tab-swiper-ad generic:scoped-slots-anyview="test2-j-tab-swiper-ad-anyview" data-vue-generic="scoped" vue-id="5db6f97e-1" list="{{tablist}}" bind:__l="__l" vue-slots="{{['anyview']}}"></j-tab-swiper-ad></view>

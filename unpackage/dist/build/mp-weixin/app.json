@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/index",
+    "pages/grant/index",
+    "pages/personal/main",
+    "pages/logs/index",
+    "pages/follow/index",
+    "pages/fans/index",
+    "pages/detail/index",
+    "pages/release/index",
+    "pages/search/index",
+    "pages/develop/develop",
+    "pages/test2/test2"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}

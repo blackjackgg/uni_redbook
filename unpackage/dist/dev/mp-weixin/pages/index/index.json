@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "index-j-tab-swiper-chart": "/pages/index/index-j-tab-swiper-chart",
+    "j-tab-swiper": "/components/j-tab-swiper/j-tab-swiper",
+    "j-gallery-storm": "/components/j-gallery-storm/j-gallery-storm"
+  }
+}

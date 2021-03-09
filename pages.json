@@ -5,9 +5,11 @@
 			"style": {
 				"navigationBarTitleText": "uni-app",
 				"navigationStyle":"custom",
-				// "enablePullDownRefresh": true,
+				"enablePullDownRefresh": false,
 				"app-plus":{
-					"titleView":false
+					"titleView":false,
+					"bounce":"none", // 将回弹属性关掉,
+					"disableScroll":true
 					// "pullToRefresh":{"offset":"30rpx",  "color": "#ff3333"}
 					}
 			}
@@ -22,12 +24,6 @@
 			"path": "pages/grant/index",
 			"style": {
 				"navigationBarTitleText": "授权"
-			}
-		},
-		{
-			"path": "pages/search/index",
-			"style": {
-				"navigationBarTitleText": "搜索"
 			}
 		},
 		{
@@ -77,15 +73,6 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "组件开发页面",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/test/test",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             

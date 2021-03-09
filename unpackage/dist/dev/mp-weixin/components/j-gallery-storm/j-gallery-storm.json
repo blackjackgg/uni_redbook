@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "load-refresh": "/components/load-refresh/load-refresh"
+  },
+  "component": true
+}

@@ -1,0 +1,89 @@
+.information.data-v-63617a94 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  color: #fff;
+  padding: 50px 0 30px;
+}
+.information ._div.data-v-63617a94 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  border-radius: 50%;
+  background: #ff2f2f;
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.prompt.data-v-63617a94 {
+  padding: 30px 20px;
+  border-top: 1px solid #eee;
+}
+.prompt .text.data-v-63617a94 {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 30px;
+}
+.prompt .text ._p.data-v-63617a94 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+.prompt .btn.data-v-63617a94 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.prompt .btn ._div.data-v-63617a94 {
+  width: calc(50% - 15px);
+}
+.prompt .btn button.data-v-63617a94 {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.prompt .btn button.data-v-63617a94::after {
+  border: none;
+}
+.prompt .btn .btn-l.data-v-63617a94 {
+  margin-right: 30px;
+}
+.prompt .btn .btn-l button.data-v-63617a94 {
+  background: #666;
+}
+.prompt .btn .btn-r button.data-v-63617a94 {
+  background: #ff2f2f;
+}
+

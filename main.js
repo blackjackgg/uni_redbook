@@ -12,7 +12,7 @@ import App from './App'
 import uView from 'ui/uview-ui';
 Vue.use(uView);
 
-import './assets/css/main.less';
+
 import Store from './store'
 import WXrequest from './utils/wx-request'
 Vue.prototype.$request = WXrequest

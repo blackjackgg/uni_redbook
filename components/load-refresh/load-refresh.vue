@@ -77,6 +77,8 @@
 		},
 		data() {
 			return {
+				moveX:0,
+				startX:0,
 				startY: 0,
 				moveY: 0,
 				updating: false, // 数据更新状态（true: 更新中）
@@ -124,28 +126,36 @@
 				}
 				this.coverTransition = 'transform .1s linear'
 				this.startY = e.touches[0].clientY
+				this.startX = e.touches[0].clientX
 			},
 			coverTouchmove(e) {
 				if (!this.isRefresh || this.updating) {
 					return
 				}
 				this.moveY = e.touches[0].clientY
+				this.moveX = e.touches[0].clientX
 				let moveDistance = this.moveY - this.startY
-				if (moveDistance <= 50) {
+				let movexdis = Math.abs(this.moveX - this.startX)
+				
+				if (movexdis <= 3){
+				
+				if ( moveDistance <= 50) {
 					this.coverTransform = `translateY(${moveDistance}px)`
 				}
 				this.moving = moveDistance >= 50
+				}
 			},
 			coverTouchend() {
 				if (!this.isRefresh || this.updating) {
 					return
 				}
-				if (this.moving) {
+				if (this.moving ) {
 					this.runRefresh()
 				} else {
 					this.coverTransition = 'transform 0.3s cubic-bezier(.21,1.93,.53,.64)'
 					this.coverTransform = 'translateY(0px)'
 				}
+				
 			},
 			runRefresh() {
 				this.scrollTop = 0

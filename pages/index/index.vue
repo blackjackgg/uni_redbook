@@ -1,13 +1,10 @@
 <template>	
 	 <view>
-		<j-tab-swiper-ad :list="tablist" v-slot:anyview="{tabitem,tabindex}">
-	<!-- 这个组件传入一个tab列表 用name来命名 输出一个tab的item 可以根据item来生成不同的页面 -->
-		<j-gallery-storm :tabitem="tabitem" :tabindex="tabindex"></j-gallery-storm>
-		</j-tab-swiper-ad>
+		<j-tab-swiper :list="tablist" v-slot:chart="{tabitem,tabindex}">
+		<!-- 这个组件传入一个tab列表 用name来命名 输出一个tab的item 可以根据item来生成不同的页面 -->
+			<j-gallery-storm :tabitem="tabitem" :tabindex="tabindex"></j-gallery-storm>
+		</j-tab-swiper>
 	 </view>
-		
-		
-		
 	</view>
 </template>
 
