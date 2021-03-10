@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "j-comment": "/components/j-comment/j-comment"
-  }
-}

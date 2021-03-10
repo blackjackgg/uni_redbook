@@ -17,6 +17,7 @@
 		{
 			"path": "pages/user/index",
 			"style": {
+				"navigationStyle":"custom",
 				"navigationBarTitleText": "用户"
 			}
 		},
@@ -86,6 +87,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/push/push",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -99,5 +109,31 @@
 		    "^u(.*)": "@/ui/uview-ui/components/u$1/u$1.vue",
 			"^tui-(.*)": "@/ui/thorui/components/tui-$1/tui-$1.vue"
 		  }
-	}
+	},
+	"tabBar": {
+			"color":"#8a8a8a",
+			"selectedColor":"#d4237a",
+			"borderStyle":"black",
+			"backgroundColor":"#ffffff",
+			"list": [
+				{
+					"pagePath":"pages/index/index",
+					"text":"首页",
+					"iconPath":"static/tabs/home.png",
+					"selectedIconPath":"static/tabs/home-active.png"
+				},
+				{
+					"pagePath":"pages/push/push",
+					"text":"发布",
+					"iconPath":"static/tabs/release.png",
+					"selectedIconPath":"static/tabs/release-active.png"
+				},
+				{
+					"pagePath":"pages/user/index",
+					"text":"我的",
+					"iconPath":"static/tabs/user.png",
+					"selectedIconPath":"static/tabs/user-active.png"
+				}
+			]	
+		 }
 }

@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "详情",
-  "usingComponents": {
-    "u-popup": "/ui/uview-ui/components/u-popup/u-popup",
-    "j-emoji": "/components/j-emoji/j-emoji"
-  }
-}

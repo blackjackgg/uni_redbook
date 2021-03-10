@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "组件开发页面",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "u-tabs": "/ui/uview-ui/components/u-tabs/u-tabs"
-  }
-}

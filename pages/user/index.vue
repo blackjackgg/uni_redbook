@@ -113,6 +113,7 @@
         ></no-data>
       </div>
     </scroll-view>
+	<j-no-status></j-no-status>
   </div>
 </template>
 

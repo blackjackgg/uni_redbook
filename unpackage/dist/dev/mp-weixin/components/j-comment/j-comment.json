@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "u-input": "/ui/uview-ui/components/u-input/u-input",
-    "tui-icon": "/ui/thorui/components/tui-icon/tui-icon",
-    "tui-button": "/ui/thorui/components/tui-button/tui-button"
-  }
-}

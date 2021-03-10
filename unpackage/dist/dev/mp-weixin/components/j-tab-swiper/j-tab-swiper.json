@@ -1,9 +1,0 @@
-{
-  "usingComponents": {
-    "u-tabs": "/ui/uview-ui/components/u-tabs/u-tabs"
-  },
-  "component": true,
-  "componentGenerics": {
-    "scoped-slots-chart": true
-  }
-}

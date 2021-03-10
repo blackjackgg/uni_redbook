@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "用户",
-  "usingComponents": {
-    "no-data": "/components/noData"
-  }
-}

@@ -3,9 +3,10 @@
 	<view  @touchstart="coverTouchstart"  @touchend="coverTouchend"  >
 		<view class="f-center" :style="{'margin-top':barHeight+'px'}">
 	<!-- 		<u-tabs ref="tabs" :list="list" bar-height="6" bar-width="40" :active-color="color" @change="change" :current="current"></u-tabs> -->
+
 		<tui-tabs  v-if="little_tab"    :unlined="true"  :bold="true"	:height="60" itemWidth="50%"  :size="22" :tabs="list" 	 selectedColor="#fffff" sliderBgColor="white" :sliderHeight="60"		 :currentTab="current" @change="change"></tui-tabs>
 		
-		<tui-tabs v-else  :height="60" itemWidth="50%"  :size="20" :tabs="list" :sliderBgColor="color"	 selectedColor="#fffff"  :currentTab="current" @change="change"></tui-tabs>
+		<tui-tabs  v-else   :height="70" itemWidth="50%"  :size="26" :tabs="list" :sliderBgColor="color"	 selectedColor="#fffff"  :currentTab="current" @change="change"></tui-tabs>
 	
 
 
@@ -139,7 +140,11 @@
 		}
 	};
 </script>
-<style>
+<style lang="scss">
+	.j-topbar{
+		display: flex;
+		width: 100vw;
+	}
 	page {
 		max-height: 100vh;
 	}

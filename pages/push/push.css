@@ -1,0 +1,40 @@
+.head {
+	display: flex;
+	padding: 20rpx;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.head .plus-btn {
+	margin-left: auto;
+}
+
+.post-txt {
+	width: 100%;
+	padding: 20rpx 0;
+	border-bottom: 1px solid #f5f5f5;
+	min-height: 300rpx;
+}
+
+.upload-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 180rpx;
+	height: 180rpx;
+	background-color: #ebe1e1ec;
+	margin-top: 30rpx;
+	border-radius: 10rpx;
+}
+
+.upload-video{
+	width: 180rpx;
+	height: 180rpx;
+	margin-top: 30rpx;
+}
+
+.warp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
