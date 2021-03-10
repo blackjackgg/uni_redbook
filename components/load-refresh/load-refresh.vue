@@ -137,12 +137,12 @@
 				let moveDistance = this.moveY - this.startY
 				let movexdis = Math.abs(this.moveX - this.startX)
 				
-				if (movexdis <= 3){
+				if (movexdis <= 6){
 				
-				if ( moveDistance <= 50) {
+				if ( moveDistance <= 70) {
 					this.coverTransform = `translateY(${moveDistance}px)`
 				}
-				this.moving = moveDistance >= 50
+				this.moving = moveDistance >= 70
 				}
 			},
 			coverTouchend() {

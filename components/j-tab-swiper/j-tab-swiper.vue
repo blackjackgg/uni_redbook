@@ -5,14 +5,14 @@
        <u-tabs ref="tabs" :list="list" bar-height="6" bar-width="40" :active-color="color"
 	   @change="change"  :current="current"></u-tabs>
 	</view>
-	 <swiper :style="{'height':swiperhigh+'px'}"  :current="swipe_current" @change="swipe_change">  
+	 <swiper :style="{'height':swiperhigh+'px'}"  :current="swipe_current" @change="swipe_change" >  
 <!-- 	     <slot v-for="(item,index) in list" 
 	             name="chart"
 	             :data="item"
 	             :index="index">
 	     </slot> -->
 		   
-			<swiper-item v-for="(item, index) in list">
+			<swiper-item v-for="(item, index) in list" >
 				<slot  name="chart" :tabitem="item" :tabindex="index"></slot>
 			 </swiper-item>        
 		 </swiper>				 

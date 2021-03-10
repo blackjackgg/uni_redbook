@@ -80,7 +80,7 @@ var components
 try {
   components = {
     loadRefresh: function() {
-      return __webpack_require__.e(/*! import() | components/load-refresh/load-refresh */ "components/load-refresh/load-refresh").then(__webpack_require__.bind(null, /*! @/components/load-refresh/load-refresh.vue */ 166))
+      return __webpack_require__.e(/*! import() | components/load-refresh/load-refresh */ "components/load-refresh/load-refresh").then(__webpack_require__.bind(null, /*! @/components/load-refresh/load-refresh.vue */ 174))
     }
   }
 } catch (e) {

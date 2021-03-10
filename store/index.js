@@ -15,9 +15,18 @@ const store = new Vuex.Store({
     httpUrl: 'http://127.0.0.1:8351',
     userInfo: null,
     token: null,
-    locationInfo: null
+    locationInfo: null,
+	current_comment:"",
+	fuck:"" // 新的状态只需要添加这里即可 如果要迅速应用大可不必写mutation
   },
   mutations: {
+	 //设置当前emoji
+	set_comment(state,payload){
+		state.current_comment = payload
+	},
+	set_test(state,payload){
+		state.fuck = payload
+	},
     //设置token
     SET_TOKEN(state, payload) {
       state.token = payload;

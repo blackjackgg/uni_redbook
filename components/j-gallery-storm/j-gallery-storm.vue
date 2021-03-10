@@ -6,7 +6,7 @@
   这个组件根据每个页面tabitem的传值 页面拿到这个传值数据再进行具体的处理
  -->
 <template>
-	<view>
+	<view >
 		<div class="public-index-wrap">
 
 			<scroll-view :scroll-y="true" :style="{'height':'100vh'}">
@@ -126,7 +126,6 @@
 					...this.pagers,
 					type: this.tabindex + 1
 				});
-				console.log(res)
 				if (!res.errno) {
 
 					if (res.data.currentPage >= res.data.totalPages) {
