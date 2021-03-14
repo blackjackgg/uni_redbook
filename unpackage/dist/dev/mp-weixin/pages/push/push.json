@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "发布",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "tui-upload": "/ui/thorui/components/tui-upload/tui-upload",
+    "u-cell-group": "/ui/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell-item": "/ui/uview-ui/components/u-cell-item/u-cell-item"
+  }
+}

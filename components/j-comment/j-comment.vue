@@ -1,15 +1,21 @@
 <template>
-	<view class="comment_view">
-		<view class="comment_send">
-	<u-input class="cm_input" v-model="$store.state.current_comment" :placeholder="'请发表评论'"	:type="type" :border="border"  :maxlength="'200'" />
-  <view class="tui-enclosure">
-    <tui-icon name="satisfied" :size="20"  @click="changeemoji" class="tui-mr icon_send"></tui-icon>
-    <tui-icon name="send"  :size="20" class="tui-mr icon_send"></tui-icon>
-    </view>
+	<view class="comment_view" :style="{height: popupheight	+'px',}">
+	<view class="comment_send" >
+	
+			<!-- 这部分固定到头部 不然和下面滚动的冲突！ -->
+			<textarea  class="cm_input" v-model="current_comment" :placeholder="'请发表评论'" height="20px" :type="type" :border="border" 
+			 :maxlength="'500'"   :cursor-spacing="'200'"  @confirm="" confirm-type="send"/>
+			<view class="tui-enclosure">
+			<tui-icon :name="faceicon" :size="26"  @click="changeemoji" class="tui-mr icon_send"></tui-icon>	
+			<tui-button  type="primary" shape='circle'width="100rpx" height="60rpx" >发送</tui-button>
+
+			<!-- <tui-icon :style="{'margin-right':'5px'}"  name="send"  :size="26" class="tui-mr icon_send"></tui-icon> -->
+			</view>
 	</view>
 		<!--表情-->
-		<view v-show="showemoji" class="emoji" @tap.prevent.stop="">
-			<view class="list">
+	<!-- 	@tap.prevent.stop="" -->
+		<view v-show="showemoji" class="emoji"   scroll-y="true" >
+			<view class="list" >
 				<view class="item" v-on:click="addtotext(item)" v-for="(item, index) in emojis" :key="index">{{ item }}</view>
 			</view>
 		</view>
@@ -23,6 +29,10 @@
 	import {mapState} from 'vuex'
 	export default {
 		computed: {
+			current_comment:{
+				get () { return this.$store.state.current_comment},
+				set (value) { this.$store.state.current_comment = value }
+			}
 		},
 		components: {
 		},
@@ -42,14 +52,25 @@
 								type: 'textarea',
 								border: true,
 								showemoji:false,
-								comment_text:""
+								comment_text:"",
+								popupheight:80,
+								faceicon:"satisfied" 
 			}
 		},
 		methods: {
 			changeemoji(){
 				this.showemoji =!this.showemoji
+				if (this.showemoji){
+					this.popupheight = 280
+					this.faceicon="imkeyboard"
+				}
+				else{
+					this.popupheight = 80
+					this.faceicon="satisfied"
+				}
 			},
 			addtotext(item){
+				console.log("hellp")
 				this.$store.state.current_comment += item
 			}
 		}
@@ -62,18 +83,33 @@ page {
   color: #333;
 }
 .comment_send{
+	z-index:8888888;
 	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0px;
+	padding-top: 0px;
 	justify-content: space-between;
-	margin-bottom: 3px;
+	background-color: white;
+	// margin-bottom: 3px;
 }
 
 .comment_view{
+	z-index: 99999999;
+	width: 100vw;
+	height:80px;
 	}
 .container2{
   padding: 30upx;
   box-sizing: border-box;
 }
 .cm_input{
+	border-radius: 20px;
+	background:  #f5f5f6;
+	height: 50px;
+	border: solid #f5f5f6;
 	margin: 10px 0 0 10px;
 }
 
@@ -119,9 +155,9 @@ page {
   padding-top: 4upx;
 }
 .tui-enclosure{
+	width: 200upx;
  display: flex;
  justify-content: space-between;
- width: 50px;
  align-items: center;
  padding: 26upx 10upx 5px 10upx;
  box-sizing: border-box;
@@ -137,9 +173,10 @@ page {
 
 .emoji{
 	background-color: #F3F3F3;
-	position: relative;
-	height: 300upx;
-	overflow: scroll;
+	// position: relative;
+	margin-top: 80px;
+	// overflow: scroll;
+	// -webkit-overflow-scrolling:touch;
 	}
 	.list:after {
 		content: ' ';
@@ -151,13 +188,18 @@ page {
 		justify-content: space-around;
 		flex-wrap: wrap;
 		padding:10px 0;
+		overflow: auto;
 		
-		.item{
+		.item{  font-size: 26px;
 				justify-content: center;
 				display: flex;
-				width: calc((100vw) /12);
+				width: calc((100vw) /6);
                 margin-bottom: 20px;
 		}
+	}
+	
+	.j-send{
+		margin-right: 5px;
 	}
 
 

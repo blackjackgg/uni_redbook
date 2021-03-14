@@ -1,0 +1,11 @@
+.u-search-box{
+	padding: 30rpx 20rpx;
+}
+.swiper{
+	height: calc(100vh - 80rpx);
+}
+
+.grid-text{
+	margin-top: 20rpx;
+	font-size: 12px;
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "index-j-tab-swiper-ad-chart": "/pages/index/index-j-tab-swiper-ad-chart",
+    "j-search": "/components/j-search/j-search",
+    "j-tab-swiper-ad": "/components/j-tab-swiper-ad/j-tab-swiper-ad",
+    "j-gallery-storm": "/components/j-gallery-storm/j-gallery-storm"
+  }
+}

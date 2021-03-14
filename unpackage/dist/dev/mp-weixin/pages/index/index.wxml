@@ -1,0 +1,1 @@
+<view><j-search vue-id="8dd740cc-1" button="inside" bind:__l="__l"></j-search><j-tab-swiper-ad generic:scoped-slots-chart="index-j-tab-swiper-ad-chart" data-vue-generic="scoped" vue-id="8dd740cc-2" list="{{tablist2}}" bind:__l="__l" vue-slots="{{['chart']}}"></j-tab-swiper-ad></view>

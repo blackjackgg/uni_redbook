@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tui-tabs": "/ui/thorui/components/tui-tabs/tui-tabs"
+  },
+  "component": true,
+  "componentGenerics": {
+    "scoped-slots-chart": true
+  }
+}

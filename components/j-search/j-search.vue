@@ -3,7 +3,7 @@
 		<view class="content" :style="{ 'border-radius': radius + 'px', border: border }">
 			<view class="content-box" :class="{ center: mode === 2 }">
 				<text class="icon icon-search">&#xe61c;</text>
-				<input class="input"  style="font-size: 8px;" :class="{ center: !active && mode === 2}" :focus="isFocus" :placeholder="placeholder" v-model="inputVal" @focus="focus" @blur="blur" />
+				<input class="input"  style="font-size: 16px;" :class="{ center: !active && mode === 2}" :focus="isFocus" :placeholder="placeholder" v-model="inputVal" @focus="focus" @blur="blur" />
 				<!-- <view v-if="!active && mode === 2" class="input sub" @click="getFocus">请输入搜索内容</view> -->
 				<text v-if="isDelShow" class="icon icon-del" @click="clear">&#xe644;</text>
 			</view>
@@ -99,7 +99,7 @@ export default {
 	border-bottom: 1px #f5f5f5 solid;
 	box-sizing: border-box;
 	padding: 0 15upx;
-	font-size: 18;
+	font-size: 16px;
 	background: #fff;
 	.content {
 		display: flex;
@@ -145,15 +145,15 @@ export default {
 			height: 100%;
 			flex-shrink: 0;
 			padding: 0 30upx;
-			background: #ff0000;
+			background: white;
 			line-height: 60upx;
-			color: #fff;
+			color: gray;
 			border-left: 1px #ccc solid;
 			transition: all 0.3s;
 		}
 	}
 	.searchBtn {
-		font-size: 8px;
+		font-size: 16px;
 	}
 
 	.button {

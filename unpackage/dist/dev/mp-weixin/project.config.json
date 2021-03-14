@@ -8,31 +8,20 @@
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "wx3011a047f254103f",
+  "appid": "wx28105f30a49d1e67",
   "projectname": "redbook2",
   "condition": {
     "search": {
-      "current": -1,
       "list": []
     },
     "conversation": {
-      "current": -1,
       "list": []
     },
     "game": {
-      "current": -1,
       "list": []
     },
     "miniprogram": {
-      "current": 0,
-      "list": [
-        {
-          "id": 0,
-          "name": "pages/test2/test2",
-          "pathName": "pages/test2/test2",
-          "query": ""
-        }
-      ]
+      "list": []
     }
   }
 }

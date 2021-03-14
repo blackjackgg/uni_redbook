@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "话题",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-search": "/ui/uview-ui/components/u-search/u-search",
+    "tui-list-view": "/ui/thorui/components/tui-list-view/tui-list-view",
+    "tui-list-cell": "/ui/thorui/components/tui-list-cell/tui-list-cell",
+    "u-empty": "/ui/uview-ui/components/u-empty/u-empty"
+  }
+}

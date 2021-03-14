@@ -11,7 +11,9 @@
     "pages/release/index",
     "pages/search/index",
     "pages/develop/develop",
-    "pages/test2/test2"
+    "pages/test2/test2",
+    "pages/push/push",
+    "pages/topic-list/topic-list"
   ],
   "subPackages": [],
   "window": {
@@ -20,6 +22,31 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap87.json"
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#d4237a",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabs/home.png",
+        "selectedIconPath": "static/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/push/push",
+        "text": "发布",
+        "iconPath": "static/tabs/release.png",
+        "selectedIconPath": "static/tabs/release-active.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "static/tabs/user.png",
+        "selectedIconPath": "static/tabs/user-active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
 }

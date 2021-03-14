@@ -57,6 +57,7 @@
 				<input :disabled="true" type="text" placeholder="写评论" v-model.trim="postParams.key" maxlength="100" />
 				<img src="/static/images/message.png" />
 			</div>
+			
 			<div class="btn">
 				<div :class="{'active': dataObj.isCollection}" @click.stop="changeMethod(1)">
 					<img :src="dataObj.isCollection ? '/static/images/markActive.png':'/static/images/mark.png'" mode="widthFix" />
@@ -74,7 +75,10 @@
 			</div>
 
 		</div>
-		<u-popup v-model="showemoji" mode="bottom" border-radius="14">
+		
+		
+		
+		<u-popup  class="j-popup" v-model="showemoji" mode="bottom" border-radius="14" >
 			<j-comment></j-comment>
 		</u-popup>
 
@@ -249,6 +253,12 @@
 </script>
 
 <style scoped lang="less">
+	.j-popup{
+		width: 100vw;
+	}
+	.content-container {
+	  height: 450rpx;
+	}
 	.public-index-wrap {
 		position: relative;
 		padding-bottom: 50px;
@@ -412,6 +422,7 @@
 				div {
 					display: flex;
 					align-items: center;
+					justify-content: flex-end;
 					margin-right: 10px;
 					transition: all 0.2s;
 

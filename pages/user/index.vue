@@ -267,7 +267,7 @@ export default {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
     background: #ff2f2f;
-    padding: 15px 10px 0;
+    padding: 50px 20px 30px 20px;
     .user-l {
       display: flex;
       align-items: center;
@@ -362,4 +362,5 @@ export default {
     }
   }
 }
+
 </style>

@@ -17,7 +17,8 @@ const store = new Vuex.Store({
     token: null,
     locationInfo: null,
 	current_comment:"",
-	fuck:"" // 新的状态只需要添加这里即可 如果要迅速应用大可不必写mutation
+	fuck:"" ,// 新的状态只需要添加这里即可 如果要迅速应用大可不必写mutation
+	current_topic:{"topic_name":""},
   },
   mutations: {
 	 //设置当前emoji

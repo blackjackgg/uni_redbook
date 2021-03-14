@@ -1,0 +1,102 @@
+.u-wrap {
+	height: calc(100vh);
+	/* #ifdef H5 */
+	height: calc(100vh - var(--window-top));
+	/* #endif */
+	display: flex;
+	flex-direction: column;
+}
+
+.u-search-box {
+	padding: 20rpx 30rpx;
+}
+
+.u-menu-wrap {
+	flex: 1;
+	display: flex;
+	overflow: hidden;
+}
+
+.u-tab-view {
+	width: 200rpx;
+	height: 100%;
+	border-right: 1px solid #F5F5F5;
+	padding-left: 20rpx;
+}
+
+.u-tab-item {
+	height: 110rpx;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 26rpx;
+	color: #444;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.u-tab-item-active {
+	position: relative;
+	color: $themes-color;
+	font-size: 30rpx;
+	font-weight: 600;
+	background: #fff;
+}
+
+.u-tab-item-active::before {
+	content: "";
+	position: absolute;
+	border-left: 4px solid $themes-color;
+	height: 32rpx;
+	left: 0;
+	top: 39rpx;
+}
+
+.u-tab-view {
+	height: 100%;
+}
+.page-view {
+	padding: 16rpx;
+}
+
+
+// 圈子列表
+.topic-item {
+	display: flex;
+	background-color: #fff;
+	padding: 20rpx;
+	
+	.right{
+		margin-left: 20rpx;
+		display: flex;
+		flex-direction: column;
+		.desc{
+			font-size: 22rpx;
+			color: #999;
+			margin: 10rpx 0;
+		}
+	}
+	.num {
+		display: flex;	
+		margin-top: auto;
+	}
+	
+	image {
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 10rpx;
+		margin-right: 10rpx;
+	}
+	
+	.btn-gz {
+		margin-left: auto;
+		margin-right: 20rpx;
+	}
+	
+	text {
+		font-size: 10px;
+		color: #999;
+		margin: 0 10rpx;
+	}
+}

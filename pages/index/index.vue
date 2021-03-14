@@ -2,7 +2,8 @@
 	<view>
 		<j-search  button="inside"></j-search>
 		<j-tab-swiper-ad :list="tablist2" v-slot:chart="{tabitem,tabindex}">
-			<j-tab-swiper-ad  :little_tab="true" :list="tablist" v-slot:chart="{tabitem,tabindex}">
+			
+			<!-- <j-tab-swiper-ad  :little_tab="true" :list="tablist" v-slot:chart="{tabitem,tabindex}"> -->
 				<!-- 			这里动态命名连slot 这些都得重新遍历一遍
  -->
 				<!-- 这个组件传入一个tab列表 用name来命名 输出一个tab的item 可以根据item来生成不同的页面 -->
@@ -10,13 +11,12 @@
 				<!-- 		<j-tab-swiper-ad :list="tablist2" v-slot:[chart+tabindex]="{tabitem:insideitem,tabindex:insideindex}">
 			<j-gallery-storm :tabitem="insideitem" :tabindex="insideindex"></j-gallery-storm>
 		</j-tab-swiper-ad> -->
-
 				<j-gallery-storm :tabitem="tabitem" :tabindex="tabindex"></j-gallery-storm>
-			</j-tab-swiper-ad>
+			<!-- </j-tab-swiper-ad> -->
 		</j-tab-swiper-ad>
 		<!-- <tui-tabbar :current="currenttab"  backdropFilter  :tabBar="tabBar" color="#777" selectedColor="#AC9157" @click="tabbarSwitch"></tui-tabbar> -->
-
-	</view>
+<!-- 	<j-no-status></j-no-status> -->
+		
 	</view>
 </template>
 

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "详情",
+  "usingComponents": {
+    "u-popup": "/ui/uview-ui/components/u-popup/u-popup",
+    "j-comment": "/components/j-comment/j-comment"
+  }
+}

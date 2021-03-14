@@ -1,0 +1,110 @@
+.wrap{
+	height: calc(100vh);
+}
+	
+.tabs-box{
+	background-color: #FFFFFF;
+	 .tab-left{
+		 width: 60%;
+	 }
+}
+
+  /*  */
+.notice-box {
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.notice-txt {
+	color: #999;
+	font-size: 12px;
+	margin-left: 20rpx;
+}
+
+.popup-notice-head {
+	font-weight: bold;
+	margin-bottom: 30rpx;
+}
+
+.popup-notice-wrap {
+	padding: 40rpx;
+}
+
+.popup-notice-wrap text {
+	color: #616161;
+	line-height: 1.8;
+}
+
+.grid-text {
+	font-size: 12px;
+	color: #616161;
+}
+
+.head {
+	position: relative;
+	height: 380rpx;
+}
+
+.head-c {
+	position: absolute;
+	top: 200rpx;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	padding: 30rpx;
+}
+
+.head-c .count {
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.head-c .count text {
+	margin: 0 5rpx;
+	color: #e6e6e6;
+}
+
+.head-c .name {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.margin-left {
+	margin-left: auto;
+	margin-right: 20rpx;
+}
+
+.head .bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* 活跃圈友 */
+.member-wrap {
+	padding: 30rpx;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+}
+
+.member-wrap .avatar {
+	margin-bottom: 10rpx;
+}
+
+.member-wrap .member-wrap-head {
+	display: flex;
+	color: #616161;
+}
+
+.member-wrap .member-wrap-head .icon {
+	margin-left: auto;
+	color: #999;
+}
+

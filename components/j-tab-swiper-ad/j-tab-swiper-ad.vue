@@ -41,8 +41,8 @@
 				startY: 0,
 				moveY: 0,
 				moving: false,
-				'disable_move':false,
-				swiperhigh: 0,
+				disable_move:false,
+				swiperhigh: 1000,
 				barHeight: 0,
 				color: "#ff0000",
 				// list: [{  // 写成通用类 list 传入 根据list个数生成 对应页面   list 里面还携带一个api 根据api 来改变每个页面的内容  页面作为插槽放进去
@@ -88,7 +88,7 @@
 					_self = this
 					setTimeout(_self.make_flap,1000)
 				}
-				else if( this.current == (this.list.length -1) && this.moveX < 0){
+				else if( this.current == (this.list && this.list.length -1) && this.moveX < 0){
 					this.disable_move = true
 					_self = this
 					setTimeout(_self.make_flap,1000)
@@ -103,29 +103,32 @@
 				return false
 			},
 			getSystemStatusBarHeight() {
-				// #ifdef MP
-				console.log("ggin222")
-				var height = 25
-				this.barHeight = height;
-				console.log("height" + height)
-				// #endif
+				this.barHeight =0 
+				// // #ifdef MP
+				// console.log("ggin222")
+				// var height = 25
+				// this.barHeight = height;
+				// console.log("height" + height)
+				// // #endif
 
-				// #ifdef APP-PLUS 
-				console.log("ggin")
-				var height = plus.navigator.getStatusbarHeight();
-				this.barHeight = height;
-				console.log("height" + height)
-				// #endif
-				// #ifdef H5
-				console.log("h5")
-				this.barHeight = 0;
-				// #endif
+				// // #ifdef APP-PLUS 
+				// console.log("ggin")
+				// var height = plus.navigator.getStatusbarHeight();
+				// this.barHeight = height;
+				// console.log("height" + height)
+				// // #endif
+				// // #ifdef H5
+				// console.log("h5")
+				// this.barHeight = 0;
+				//// #endif
 
 				let myself = this
 				// 获取屏幕高度设置swiper
 				uni.getSystemInfo({
 					success: function(res) {
-						myself.swiperhigh = res.windowHeight - myself.barHeight - 50;
+						console.log(res);
+						// myself.swiperhigh = res.windowHeight - myself.barHeight - 50;
+						myself.swiperhigh = res.windowHeight;
 					}
 				});
 			},

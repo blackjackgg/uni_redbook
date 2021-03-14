@@ -1,50 +1,41 @@
 <template>
-  <view class="container">
-    <view class="head">
-      <!-- 图文 -->
-      <u-button class="plus-btn"
-                type="primary"
-                :disabled="btnDisabled"
-                :loading="btnLoading"
-                @click="uploadImg">发布</u-button>
-      <block v-if="form.type == 1">
-
-      </block>
-    </view>
+	 <view>
+  <view class="container2">
+	    <div class="title">
+	      <input
+	        type="text"
+	        v-model.trim="form.title"
+	        placeholder="输入标题会引起更多人关注"
+	        maxlength="50"
+	      />
+	    </div>
     <textarea placeholder="这一刻的想法..."
-              :auto-height="true"
               maxlength="-1"
+			  height="60px"
               v-model="form.content"
               class="post-txt"></textarea>
-    <view @click="chooseItem"
+			  
+	<tui-upload :value="value" :serverUrl="serverUrl" @complete="result" @remove="remove"></tui-upload>
+<!--    <view @click="chooseItem"
           class="upload-wrap">
       <u-icon name="plus"></u-icon>
     </view>
-    <p>图片/视频</p>
+    <p>图片</p>
 
     <block v-if="form.type == 2">
       <video class="upload-video"
              :src="form.media[0]"></video>
-    </block>
-    <u-upload ref="uUpload"
+    </block> -->
+<!--   <u-upload ref="uUpload"
               name="file"
               :max-count="9"
               :header="header"
               :action="uploadImgUrl"
               @on-uploaded="submit"
-              custom-btn="true"
-              :auto-upload="false"></u-upload>
-    <u-cell-group border="false">
-      <u-cell-item icon="tags"
-                   :title="circle.circleName"
-                   bg-color="#F5F5F5"
-                   @click="setParams(0)"></u-cell-item>
-      <u-cell-item icon="map"
-                   :title="position"
-                   bg-color="#F5F5F5"
-                   @click="setParams(1)"></u-cell-item>
-    </u-cell-group>
-    <u-action-sheet :list="sheetList"
+              :custom-btn="true"
+              :auto-upload="false"></u-upload> -->
+
+ <!--   <u-action-sheet :list="sheetList"
                     v-model="showSheet"
                     @click="onSheetItem"></u-action-sheet>
     <u-toast ref="uToast" />
@@ -55,16 +46,41 @@
                    :show="uploadStatus"
                    size="50"></u-loading>
         文件上传...
-      </view>
+      </view> -->
 
-    </u-mask>
+<!--    </u-mask> -->
+	
+	<div class="public-btn-class fixed_bottom">
+	  <div class="common-btn mg-d-s pd" :class="{active: true}" @click.stop="postForm()">发布作品</div>
+	</div>
+	
+
 
   </view>
+  <u-cell-group :border="false">
+    <u-cell-item icon="tags"
+                 :title="topicname"
+                 bg-color="#F5F5F5"
+                 @click="chooseCircle"></u-cell-item>
+    <u-cell-item icon="map"
+                 :title="position"
+                 bg-color="#F5F5F5"
+                 @click="setParams(1)"></u-cell-item>
+  </u-cell-group>
+ </view>
 </template>
 
 <script>
+	import {mapState} from 'vuex'
 export default {
   components: { },
+  computed:{
+		 topicname:{
+			  get(){
+				  return this.$store.state.current_topic.topic_name || "添加话题"
+			  }
+	  }
+  },
   data () {
     return {
       sheetList: [
@@ -72,15 +88,15 @@ export default {
           text: '选择图片',
           color: 'black'
         },
-        {
-          text: '选择视频',
-          color: 'black'
-        }
+        // {
+        //   text: '选择视频',
+        //   color: 'black'
+        // }
       ],
       showSheet: false,
-      position: '选择位置',
+      position: '添加地点',
       circle: {
-        circleName: '选择圈子'
+        circleName: '添加话题'
       },
       btnDisabled: false,
       btnLoading: false,
@@ -110,23 +126,25 @@ export default {
 
   },
   onShow (e) {
-    let pages = getCurrentPages();
-    let currPage = pages[pages.length - 1];
-    if (currPage.data.circle) {
-      this.circle = currPage.data.circle;
-    }
-    let position = uni.getStorageSync("position");
-    if (position) {
-      this.position = position
-    }
-    console.log(this.circle)
-    if (this.circle.id) {
-      this.form.circleId = this.circle.id
-    }
+    // let pages = getCurrentPages();
+    // let currPage = pages[pages.length - 1];
+    // if (currPage.data.circle) {
+    //   this.circle = currPage.data.circle;
+    // }
+    // let position = uni.getStorageSync("position");
+    // if (position) {
+    //   this.position = position
+    // }
+    // console.log(this.circle)
+    // if (this.circle.id) {
+    //   this.form.circleId = this.circle.id
+    // }
   },
   methods: {
+	  
     chooseItem () {
-      this.showSheet = true
+      // this.showSheet = true
+	  this.chooseImage()
     },
     onSheetItem (index) {
       let runQueue = {
@@ -186,9 +204,14 @@ export default {
       })
     },
     chooseCircle () {
+	  console.log("navigate");
       uni.navigateTo({
-        url: "/pages/topic-cate-list/topic-cate-list?isBack=true"
+       url: `../topic-list/topic-list`,
+	    success: res => {},fail: (err) => {console.log(err);},complete: () => {}
+
       })
+	  
+	  console.log("end");
     },
     uploadImg () {
       this.btnDisabled = true;
@@ -277,11 +300,100 @@ export default {
         circleId: "",
         type: 1
       }
-    }
+    },
+	postForm(){
+		uni.showLoading({
+			title:"发布中..."
+		})
+		setTimeout(this.success,1000)
+	},
+	success(){
+		uni.showToast({
+			title:"发布成功"
+		})
+		uni.switchTab({
+			url:'../index/index'
+		})
+	}
   }
 }
 </script>
 
 <style lang="scss">
-@import "push.css";
+	
+.head {
+	display: flex;
+	padding: 20rpx;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.head .plus-btn {
+	margin-left: auto;
+}
+
+.post-txt {
+	width: 100%;
+	padding: 20rpx 0;
+	border-bottom: 1px solid #f5f5f5;
+	min-height: 300rpx;
+}
+
+.upload-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 180rpx;
+	height: 180rpx;
+	background-color: #ebe1e1ec;
+	margin-top: 30rpx;
+	border-radius: 10rpx;
+}
+
+.upload-video{
+	width: 180rpx;
+	height: 180rpx;
+	margin-top: 30rpx;
+}
+
+.warp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+
+
+page {
+  background-color:white;
+  font-size: 32rpx;
+  line-height: 1.7;
+}
+
+.container2 {
+  padding: 20rpx;
+  
+
+}
+
+    .title {
+		width: 100%;
+      border-bottom: 1px solid #eee;
+      // padding: 15px 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+.fixed_bottom{
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	bottom: 50px;
+	left: 0px;
+	width: 100%;
+}
+
 </style>
+
+

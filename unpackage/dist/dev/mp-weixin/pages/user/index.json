@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "用户",
+  "usingComponents": {
+    "j-no-status": "/components/j-no-status/j-no-status",
+    "no-data": "/components/noData"
+  }
+}
